@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1555645851 source:c:\users\pipoca\desktop\funciones\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1555646409 source:c:\users\pipoca\desktop\funciones\funciones.c
+	<stdio.h>
+
+1555645672 c:\users\pipoca\desktop\funciones\funciones.h
+	<stdio.h>
+
+1555647686 source:d:\utn\funciones\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1555874737 d:\utn\funciones\funciones.h
+	<stdio.h>
+
