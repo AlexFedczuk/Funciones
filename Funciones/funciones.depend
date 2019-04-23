@@ -18,3 +18,15 @@
 1555874737 d:\utn\funciones\funciones.h
 	<stdio.h>
 
+1556058968 source:c:\users\pipoca\desktop\funciones\funciones\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1556059373 c:\users\pipoca\desktop\funciones\funciones\funciones.h
+	<stdio.h>
+
+1556059323 source:c:\users\pipoca\desktop\funciones\funciones\funciones.c
+	<stdio.h>
+	"funciones.h"
+

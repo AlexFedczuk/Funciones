@@ -70,3 +70,8 @@ int aprovarMateria(int notaMinima, int nota);
  */
 int factorial(int numero);
 
+void cargarVector(int [],int);
+void mostrarNumeros(int[],int );
+int buscarMaximo(int [],int);
+int buscarValores(int [],int ,int);
+
