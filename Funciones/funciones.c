@@ -8,9 +8,11 @@
     int unEntero;
     printf("%s", texto);
     scanf("%d", &unEntero);
+    return unEntero;
+
 }
 
-//sumar:
+//sumar/drestar/multiplicar:
     int cuenta(int numeroX,int numeroY)
     {
         int resultado= numeroX + numeroY;
@@ -42,20 +44,9 @@
         do{
             printf("ingrese una nota entre 0 y 10:");
             scanf("%d", &notaIngresada);
-            printf("ingrese otra nota entre 0 y 10:");
-            scanf("%d", &notaIngresada);
         }while(notaIngresada<0 || notaIngresada>10);
 
         return notaIngresada;
-    }
-//SACAR PROMEDIO:
-    float sacarPromedio(int suma, int cantidad)
-    {
-        float promedio;
-
-        promedio= (float)suma/cantidad;
-
-        return promedio;
     }
 
 //APROBAR MATERIA:
@@ -82,12 +73,7 @@ int factorial(int numero)
 
     return resultado;
 }
-
-
-
-
-
-
+//CARGAR VECTOR:
 void cargarVector(int numerosEnteros[],int tam)
 {
     int i;
@@ -98,6 +84,7 @@ void cargarVector(int numerosEnteros[],int tam)
         scanf("%d",&numerosEnteros[i]);
     }
 }
+//MOSTRAR CONTENIDO DEL VECTOR:
 void mostrarNumeros(int numerosEnteros[],int tam)
 {
     int i;
@@ -107,6 +94,7 @@ void mostrarNumeros(int numerosEnteros[],int tam)
     }
 }
 
+//BUSCAR MAXIMO EN UN VECTOR:
 int buscarMaximo(int numeros[],int tam)
 {
     int i;
@@ -128,6 +116,7 @@ int buscarMaximo(int numeros[],int tam)
     return maximo;
 }
 
+//BUSCAR VALOR DENTRO DE UN VECTOR:
 int buscarValor(int numeros[],int tam,int valor)
 {
     int indiceValor=-1;
@@ -142,4 +131,103 @@ int buscarValor(int numeros[],int tam,int valor)
         }
     }
     return indiceValor;
+}
+
+//BURBUJEO:
+void ordenarVector(int numeros[], int tam)
+    {
+        int i;
+        int j;
+        int aux;
+        for(i=0;i<tam-1;i++)
+        {
+            for(j=i+1;i<tam;j++)
+            {
+                if(numeros[i]>numeros[j])
+                {
+                    aux=numeros[i];
+                    numeros[i]=numeros[j];
+                    numeros[j]=aux;
+                }
+            }
+        }
+    }
+
+//MENU DE OPCIONES:
+void menuDeOpciones(void)
+{
+    int opcion;
+    char seguir = 's';
+
+    do{
+        printf("1. Alta\n2.Baja\n3.Informar\n4.Salir\nElija una opcion:");
+        scanf("%d", &opcion);
+
+        switch(opcion)
+        {
+        case 1:
+
+            break;
+        case 2:
+
+            break;
+        case 3:
+
+            break;
+        case 4:
+
+            seguir = 'n';
+            break;
+        default:
+
+            break;
+        }
+        system("pause");
+        system("cls");
+    }while(seguir =='s');
+}
+//-----------------------------------------------------------------------------------------
+                    //ESTRUCTURAS//
+
+//CARGAR UNA ESTRUCTURA:
+void cargarEmpleados(eEmpleado lista[],int tam)
+{
+    int i;
+    for(i=0;i<tam;i++)
+    {
+        printf("ingrese legajo: ");
+        scanf("%d", &lista[i].legajos );
+
+        printf("ingrese nombre: ");
+        fflush(stdin);
+        gets(lista[i].nombre);
+
+
+        printf("ingrese sexo (M o F): ");
+        fflush(stdin);
+        scanf("%c",&lista[i].sexo);
+
+        printf("ingrese sueldo bruto: ");
+        scanf("%f", &lista[i].sueldoBruto);
+
+        lista[i].sueldoNeto= lista[i].sueldoBruto*0.85;
+
+        mostrarUnempleado(lista,i);
+    }
+}
+
+//MOSTRAR UN SOLO EMPLEADO:
+void mostrarUnempleado(eEmpleado lista[],int tam)
+{
+    printf("%d - %s - %c - %f - %f\n ",lista[tam].legajos,lista[tam].nombre,lista[tam].sexo,lista[tam].sueldoBruto,lista[tam].sueldoNeto);
+}
+
+//MOSTRAR TODOS LOS EMPLEADOS:
+void mostrarLista(eEmpleado lista[],int tam)
+{
+    int i;
+    for(i=0;i<tam;i++)
+    {
+        mostrarUnempleado(lista,i);
+    }
 }
