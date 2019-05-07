@@ -155,3 +155,23 @@ void mostrarUnempleado(eEmpleado[],int);
  *
  */
 void mostrarEmpleado(eEmpleado[],int);
+
+//-----------------------------------------------------------------------------------------
+                    //ESTRUCTURAS//
+
+
+void cargarEmpleados(eEmpleado[],int);
+void mostrarUnEmpleado(eEmpleado[],int);
+void mostrarLista(eEmpleado[],int);
+void inicializarEmpleados(eEmpleado[],int);
+int buscarLibre(eEmpleado[],int);
+void hardcodearDatosEmpleados(eEmpleado[],int);
+
+void modificar(eEmpleado[],int,int);
+/*void modificar(eEmpleado[],int,);
+int buacarLegajo(eEmpleado[],int);*/
+
+void darDeBaja(eEmpleado[],int,int);
+
+float buscarSueldoMaximo(eEmpleado[],int);
+void mostrarEmpleadoSueldoMaximo(eEmpleado[],int);
